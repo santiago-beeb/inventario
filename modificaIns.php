@@ -39,7 +39,7 @@ include("var.php");
                         on ins_registroInstrumento.reg_nombreInstrumento = ins_nombreInstrumento.nom_id
                         where reg_id = '$_POST[insModificar]'");
                         while($reg = mysqli_fetch_array($registros)) {
-                            '<option value="'.$reg['nom_id'].'">'.$reg['nom_instrumento'].'</option>';
+                            echo '<option value="'.$reg['nom_id'].'">'.$reg['nom_instrumento'].'</option>';
                         }
                         $registros = mysqli_query($conexion,"select * from ins_nombreInstrumento");
                         while($reg = mysqli_fetch_array($registros)) {
@@ -58,7 +58,7 @@ include("var.php");
                         on ins_registroInstrumento.reg_tipoInstrumento = ins_tipoInstrumento.tpo_id
                         where reg_id = '$_POST[insModificar]'");
                         while($reg = mysqli_fetch_array($registros)) {
-                            '<option value="'.$reg['tpo_id'].'">'.$reg['tpo_tipoInstrumento'].'</option>';
+                            echo '<option value="'.$reg['tpo_id'].'">'.$reg['tpo_tipoInstrumento'].'</option>';
                         }
                         $registros = mysqli_query($conexion,"select * from ins_tipoinstrumento");
                         while($reg = mysqli_fetch_array($registros)) {
